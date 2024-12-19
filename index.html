@@ -1,42 +1,242 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
+    <!-- Заголовок документа, встановлення мови та кодування -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Використання CSS</title>
+    <title>Виконання завдання</title>
+    <style>
+        /* Скидання стандартних відступів та стилів */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <!-- Подключение внешнего CSS-файла -->
-    <link rel="stylesheet" href="styles.css">
+        /* Основний стиль сторінки */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 10px;
+        }
+
+        /* Стиль заголовка */
+        .header {
+            background-color: #b3cde0;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Стиль меню навігації */
+        .navigation-menu {
+            background-color: #6497b1;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        /* Основний контейнер контенту */
+        .main-content {
+            display: flex;
+            flex: 1;
+            padding: 10px;
+            background-color: #cce6ff;
+        }
+
+        /* Основний розділ контенту */
+        .content-section {
+            flex: 3;
+            margin-right: 10px;
+        }
+
+        /* Стиль статей */
+        .content-section article {
+            background-color: #99d8d0;
+            margin-bottom: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Секція пошуку/додаткового контенту */
+        .search-section {
+            flex: 1;
+            background-color: #91bad6;
+            padding: 10px;
+        }
+
+        /* Стиль нижнього колонтитула */
+        .footer {
+            background-color: #b3cde0;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Таблиця: межі та відступи */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+
+        /* Межі таблиці */
+        table, th, td {
+            border: 1px solid #000;
+        }
+
+        /* Вирівнювання тексту в таблиці */
+        th, td {
+            padding: 5px;
+            text-align: center;
+        }
+
+        /* Форма: відступи між елементами */
+        form {
+            margin-top: 10px;
+        }
+
+        form div {
+            margin-bottom: 10px;
+        }
+
+        /* Зображення в посиланнях */
+        .image-link img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
 </head>
 <body>
-    <!-- Перемикачі -->
-    <div class="radio-container">
-        <input type="radio" id="option1" name="options" checked>
-        <label for="option1" style="background-color: lightblue; padding: 10px; border-radius: 5px;">Option 1</label>
-        <input type="radio" id="option2" name="options">
-        <label for="option2" style="background-color: lightgreen; padding: 10px; border-radius: 5px;">Option 2</label>
+    <!-- Заголовок сторінки -->
+    <header class="header">
+        Шевченко Юрій Юрійович
+    </header>
+
+    <!-- Меню навігації -->
+    <nav class="navigation-menu">
+        Студент групи КІУКІ-22-4
+    </nav>
+
+    <!-- Головний контент -->
+    <div class="main-content">
+        <section class="content-section">
+            <h2>Лабораторна робота 1</h2>
+
+            <!-- Оформлений текст -->
+            <article>
+                <h3>Оформлений текст</h3>
+                <p>Основна <b>тригонометрична тотожність:</b></p>
+                <p>cos<sup>2</sup> <b>α</b> + sin<sup>2</sup> <b>α</b> = 1</p>
+                <p>Приклад суворої нерівності: α &lt; β.</p>
+                <p>Нестрога нерівність: α ≤ β означає, що або α &lt; β, або α = β.</p>
+            </article>
+
+            <!-- Дворівневий список -->
+            <article>
+                <h3>Список</h3>
+                <ul>
+                    <li>Питання 1
+                        <ul>
+                            <li>Варіант 1</li>
+                            <li>Варіант 2</li>
+                            <li>Варіант 3</li>
+                        </ul>
+                    </li>
+                    <li>Питання 2
+                        <ul>
+                            <li>Варіант 1</li>
+                            <li>Варіант 2</li>
+                            <li>Варіант 3</li>
+                        </ul>
+                    </li>
+                </ul>
+            </article>
+
+            <!-- Таблиця -->
+            <article>
+                <h3>Таблиця</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Студент</th>
+                            <th>Soft Skills</th>
+                            <th>Моделювання систем</th>
+                            <th>Internet-технології</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Іванов</td>
+                            <td>95</td>
+                            <td>88</td>
+                            <td>92</td>
+                        </tr>
+                        <tr>
+                            <td>Петренко</td>
+                            <td>87</td>
+                            <td>90</td>
+                            <td>84</td>
+                        </tr>
+                        <tr>
+                            <td>Шевченко</td>
+                            <td>92</td>
+                            <td>85</td>
+                            <td>89</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <!-- Форма реєстрації -->
+            <article>
+                <h3>Форма</h3>
+                <form>
+                    <div>
+                        <label for="name">Ім'я:</label>
+                        <input type="text" id="name" name="name">
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div>
+                        <label for="password">Пароль:</label>
+                        <input type="password" id="password" name="password">
+                    </div>
+                    <div>
+                        <label for="gender">Стать:</label>
+                        <select id="gender" name="gender">
+                            <option value="male">Чоловіча</option>
+                            <option value="female">Жіноча</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit">Зареєструватися</button>
+                    </div>
+                </form>
+            </article>
+
+            <!-- Зображення та посилання -->
+            <article class="image-link">
+                <h3>Зображення та посилання</h3>
+                <a href="https://nure.ua" target="_blank">
+                    <img src="https://nure.ua/wp-content/uploads/2018/03/logo-NURE.png" alt="Банер ХНУРЕ">
+                </a>
+            </article>
+        </section>
+
+        <!-- Секція пошуку -->
+        <aside class="search-section">
+            <h2>Search</h2>
+            <div class="navigation">Navigation</div>
+        </aside>
     </div>
 
-    <!-- Контейнер із елементами -->
-    <div class="flex-container">
-        <div class="box green">1</div>
-        <div class="box blue">2</div>
-        <div class="box blue">3</div>
-        <div class="box red">4</div>
-    </div>
-
-    <!-- Елемент з position -->
-    <div class="positioned">Positioned Element</div>
-
-    <!-- Контейнер із float-елементами -->
-    <div class="float-container">
-        <div class="float-item">Float 1</div>
-        <div class="float-item">Float 2</div>
-        <div class="float-item">Float 3</div>
-    </div>
-
-    <!-- Використання селекторів -->
-    <p>Це <span class="highlight">текст</span>, у якому демонструється використання класів.</p>
-    <p id="special">Цей текст має стиль через ідентифікатор.</p>
+    <!-- Нижній колонтитул -->
+    <footer class="footer">
+        Footer
+    </footer>
 </body>
 </html>
